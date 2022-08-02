@@ -62,7 +62,7 @@ INSERT INTO SpotifyClone.artistas (
 ('Tyler Isle'),
 ('Fog');
 
-CREATE TABLE SpotifyClone.albums (
+CREATE TABLE SpotifyClone.albuns (
   album_id INT AUTO_INCREMENT,
   album VARCHAR(255),
   ano_lancamento YEAR,
@@ -72,7 +72,7 @@ CREATE TABLE SpotifyClone.albums (
   FOREIGN KEY (album_artista_id) REFERENCES SpotifyClone.artistas(artista_id)
 );
 
-INSERT INTO SpotifyClone.albums (
+INSERT INTO SpotifyClone.albuns (
   album,
   ano_lancamento,
   album_artista_id
@@ -133,7 +133,7 @@ CREATE TABLE SpotifyClone.cancoes (
   artista_id_cancoes INT,
 
   PRIMARY KEY (cancao_id),
-  FOREIGN KEY (album_id_cancoes) REFERENCES SpotifyClone.albums(album_id),
+  FOREIGN KEY (album_id_cancoes) REFERENCES SpotifyClone.albuns(album_id),
   FOREIGN KEY (artista_id_cancoes) REFERENCES SpotifyClone.artistas(artista_id)
 );
 
@@ -214,7 +214,7 @@ INSERT INTO SpotifyClone.historico_reproducoes (
 (26,	"2020-07-30 10:00:00",	3),
 (2,	"2021-08-15 17:10:10",	4),
 (35,	"2021-07-10 15:20:30",	4),
-(2,	"2021-01-09 01:44:33",	4),
+(27,	"2021-01-09 01:44:33",	4),
 (7,	"2020-07-03 19:33:28",	5),
 (12,	"2017-02-24 21:14:22",	5),
 (14,	"2020-08-06 15:23:43",	5),
